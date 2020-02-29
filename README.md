@@ -19,8 +19,16 @@ The development workflow uses [pipenv](https://github.com/pypa/pipenv "pipenv re
 
 #### File Structure
 
-#### 
-
+|--.github - github actions
+├── app - sqip application
+│   └── providers - integration providers
+└── infrastructure - all environment deployments
+    ├── helm 
+    │   └── SQIP
+    │       ├── charts
+    │       └── templates
+    │           └── tests
+    └── terraform
 
 # Future
 In the future we would love to have a provider system that allows for different queue mechanisms and backend database's or services.  
