@@ -18,7 +18,7 @@ The developer interface for interacting with qldb is a message queue not the SQI
 The development workflow uses [pipenv](https://github.com/pypa/pipenv "pipenv repository") to manage the virutal environments.  
 
 #### File Structure
-
+```
 |--.github - github actions
 ├── app - sqip application
 │   └── providers - integration providers
@@ -29,6 +29,7 @@ The development workflow uses [pipenv](https://github.com/pypa/pipenv "pipenv re
     │       └── templates
     │           └── tests
     └── terraform
+```
 
 # Future
 In the future we would love to have a provider system that allows for different queue mechanisms and backend database's or services.  
