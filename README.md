@@ -12,5 +12,15 @@ The developer interface for interacting with qldb is a message queue not the SQI
 
 ![SQIP-Architecture](SQIP-Architecture.svg)
 
+# Code
+
+#### Python Environment
+The development workflow uses [pipenv](https://github.com/pypa/pipenv "pipenv repository") to manage the virutal environments.  
+
+#### File Structure
+
+#### 
+
+
 # Future
 In the future we would love to have a provider system that allows for different queue mechanisms and backend database's or services.  
