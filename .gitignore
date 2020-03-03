@@ -1,0 +1,7 @@
+
+#IDE's
+.vscode/
+.idea
+
+#python
+Pipfile.lock
