@@ -37,7 +37,7 @@ def create_app(test_config=None):
     app.add_url_rule('/qldb/', defaults={}, view_func=qldb_provider, methods=['POST', ])
 
     kubemq_provider = KubeMQProvider.as_view("kubemq_provider")
-    app.add_url_rule('/qldb/', defaults={}, view_func=kubemq_provider, methods=['GET', ])
-    app.add_url_rule('/qldb/', defaults={}, view_func=kubemq_provider, methods=['POST', ])
+    app.add_url_rule('/kubemq/', defaults={}, view_func=kubemq_provider, methods=['GET', ])
+    app.add_url_rule('/kubemq/', defaults={}, view_func=kubemq_provider, methods=['POST', ])
 
     return app
