@@ -48,6 +48,15 @@ $ flask run
  * Debugger PIN: 326-874-135
 ```
 
+Check the `version` API:
+
+```
+$ curl http://127.0.0.1:5000/version
+SQIP v-0.0.1
+```
+
+
+
 
 
 # Future
