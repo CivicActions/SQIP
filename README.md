@@ -59,7 +59,7 @@ SQIP v-0.0.1
 
 # Design
 
-![SQIP Package Diagram](SQIP-Model-SQIP Package Diagram.svg)
+![SQIP Package Diagram](SQIP-Model-SQIP-Package-Diagram.svg)
 
 # Future
 
