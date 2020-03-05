@@ -10,12 +10,12 @@ The developer interface for interacting with qldb is a message queue not the SQI
 - standardization of logging and managing auditable data
 - scalability and confidence in your audits
 
-![SQIP-Architecture](SQIP-Architecture.svg)
+![SQIP Architecture Diagram](SQIP-Architecture.svg)
 
 # Code
 
 #### Python Environment
-The development workflow uses [pipenv](https://github.com/pypa/pipenv "pipenv repository") to manage the virutal environments.  
+The development workflow uses [pipenv](https://github.com/pypa/pipenv) to manage the virtual environments.  
 
 #### File Structure
 ```
@@ -31,5 +31,36 @@ The development workflow uses [pipenv](https://github.com/pypa/pipenv "pipenv re
     └── terraform
 ```
 
+The `app` directory contains a Flask application, run the application:
+
+```
+$ pipenv install # init env from fresh repo clone
+$ pipenv shell
+$ export FLASK_APP=app
+$ export FLASK_ENV=development
+$ flask run
+ * Serving Flask app "app" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 326-874-135
+```
+
+Check the `version` API:
+
+```
+$ curl http://127.0.0.1:5000/version
+SQIP v-0.0.1
+```
+
+
+
+# Design
+
+![SQIP Package Diagram](SQIP-Model-SQIP Package Diagram.svg)
+
 # Future
+
 In the future we would love to have a provider system that allows for different queue mechanisms and backend database's or services.  
