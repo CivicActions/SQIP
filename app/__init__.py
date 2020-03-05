@@ -2,6 +2,9 @@ import os
 
 from flask import Flask
 
+from app.providers.kubemq import KubeMQProvider
+from app.providers.qldb import QLDBProvider
+
 
 def create_app(test_config=None):
     # create and configure the app
@@ -25,5 +28,12 @@ def create_app(test_config=None):
     def hello():
         return 'SQIP v-0.0.1'
 
-    return app
+    qldb_provider = QLDBProvider.as_view("qldb_provider")
+    app.add_url_rule('/qldb/', defaults={}, view_func=qldb_provider, methods=['GET', ])
+    app.add_url_rule('/qldb/', defaults={}, view_func=qldb_provider, methods=['POST', ])
 
+    kubemq_provider = KubeMQProvider.as_view("kubemq_provider")
+    app.add_url_rule('/qldb/', defaults={}, view_func=kubemq_provider, methods=['GET', ])
+    app.add_url_rule('/qldb/', defaults={}, view_func=kubemq_provider, methods=['POST', ])
+
+    return app
