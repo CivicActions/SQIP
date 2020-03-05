@@ -10,7 +10,7 @@ The developer interface for interacting with qldb is a message queue not the SQI
 - standardization of logging and managing auditable data
 - scalability and confidence in your audits
 
-![SQIP-Architecture](SQIP-Architecture.svg)
+![SQIP Architecture Diagram](SQIP-Architecture.svg)
 
 # Code
 
@@ -57,7 +57,9 @@ SQIP v-0.0.1
 
 
 
+# Design
 
+![SQIP Package Diagram](SQIP-Model-SQIP Package Diagram.svg)
 
 # Future
 
