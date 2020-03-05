@@ -25,8 +25,12 @@ def create_app(test_config=None):
 
     # a simple page that says hello
     @app.route('/version')
-    def hello():
+    def version():
         return 'SQIP v-0.0.1'
+
+    @app.route('/health')
+    def health():
+        return 'OKAY'
 
     qldb_provider = QLDBProvider.as_view("qldb_provider")
     app.add_url_rule('/qldb/', defaults={}, view_func=qldb_provider, methods=['GET', ])
