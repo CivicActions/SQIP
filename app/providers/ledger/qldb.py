@@ -1,10 +1,10 @@
 from flask.views import MethodView
 
 
-class KubeMQProvider(MethodView):
+class QLDBProvider(MethodView):
 
     def get(self):
-        # get status of KubeMQ provider
+        return 'Ledger: v0.0.1'
         pass
 
     def post(self):
