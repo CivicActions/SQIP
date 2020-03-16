@@ -2,8 +2,8 @@ import os
 
 from flask import Flask
 
-from app.providers.kubemq import KubeMQProvider
-from app.providers.qldb import QLDBProvider
+from app.providers.messaging.rabbitmq import RabbitMQProvider
+from app.providers.ledger.qldb import QLDBProvider
 
 
 def create_app(test_config=None):
@@ -36,7 +36,7 @@ def create_app(test_config=None):
     app.add_url_rule('/qldb/', defaults={}, view_func=qldb_provider, methods=['GET', ])
     app.add_url_rule('/qldb/', defaults={}, view_func=qldb_provider, methods=['POST', ])
 
-    kubemq_provider = KubeMQProvider.as_view("kubemq_provider")
+    kubemq_provider = RabbitMQProvider.as_view("kubemq_provider")
     app.add_url_rule('/kubemq/', defaults={}, view_func=kubemq_provider, methods=['GET', ])
     app.add_url_rule('/kubemq/', defaults={}, view_func=kubemq_provider, methods=['POST', ])
 

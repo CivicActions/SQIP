@@ -1,10 +1,10 @@
 from flask.views import MethodView
 
 
-class QLDBProvider(MethodView):
+class RabbitMQProvider(MethodView):
 
     def get(self):
-        # get status of QLDB provider
+        return 'Messaging: v0.0.1'
         pass
 
     def post(self):
