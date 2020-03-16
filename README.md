@@ -59,7 +59,23 @@ SQIP v-0.0.1
 
 # Design
 
+
+
+## Use Case Diagram
+
+![SQIP-Model-SQP-Use-Case-Diagram](SQIP-Model-SQP-Use-Case-Diagram.svg)
+
+
+
+## Package Diagram
+
 ![SQIP Package Diagram](SQIP-Model-SQIP-Package-Diagram.svg)
+
+
+
+## Class Diagram
+
+![SQIP-Model-SQIP-Class-Diagram](SQIP-Model-SQIP-Class-Diagram.svg)
 
 # Future
 
