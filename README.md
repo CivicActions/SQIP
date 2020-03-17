@@ -33,7 +33,7 @@ The development workflow uses [pipenv](https://github.com/pypa/pipenv) to manage
 
 The `app` directory contains a Flask application, run the application:
 
-```
+```shell script
 $ pipenv install # init env from fresh repo clone
 $ pipenv shell
 $ export FLASK_APP=app
@@ -50,9 +50,14 @@ $ flask run
 
 Check the `version` API:
 
+```shell script
+$ curl http://127.0.0.1:5000/publish/version
+0.0.1
 ```
-$ curl http://127.0.0.1:5000/version
-SQIP v-0.0.1
+
+Swagger API docs available at:
+```shell script
+http://127.0.0.1:5000/
 ```
 
 
