@@ -34,7 +34,7 @@ The development workflow uses [pipenv](https://github.com/pypa/pipenv) to manage
 The `app` directory contains a Flask application, run the application:
 
 ```shell script
-$ pipenv install # init env from fresh repo clone
+$ pipenv install --dev # init env for development
 $ pipenv shell
 $ export FLASK_APP=app
 $ export FLASK_ENV=development
@@ -60,6 +60,16 @@ Swagger API docs available at:
 http://127.0.0.1:5000/
 ```
 
+Run Tests
+Open a new terminal window and run the flask app (see above), the run:
+```shell script
+$ pipenv shell
+$ pytest
+```
+Or
+```shell script
+$ pipenv run pytest
+```
 
 
 # Design
