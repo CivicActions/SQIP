@@ -62,6 +62,16 @@ Or
 $ pipenv run pytest
 ```
 
+### GitHub Actions
+The file `.github/workflows/main.yml` contains jobs to run tests and build SQIP. The build job needs and implementation. The test job will run the code in the `tests` folder when code is pushed to the repository.
+To run Github Actions locally, use https://github.com/nektos/act. To install on macOS:
+```shell script
+brew install nektos/tap/act
+```
+and run
+```shell script
+act -P ubuntu-latest=nektos/act-environments-ubuntu:18.04
+```
 
 # Design
 
