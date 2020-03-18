@@ -1,3 +1,6 @@
+
+https://github.com/CivicActions/SQIP/workflows/CI/badge.svg
+
 # SQIP - About/Vision 
 (Pronounced as 'skip')
 
