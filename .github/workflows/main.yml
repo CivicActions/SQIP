@@ -1,10 +1,43 @@
 name: CI
 
-on: [push]
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-  build:
+  test:
+    runs-on: ubuntu-latest
 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+      - name: Install pipenv
+        run: |
+          pip install pipenv Flask
+      - name: Start the application
+        run: |
+          echo -e "export FLASK_APP=app\nexport FLASK_ENV=development" > .env
+          pipenv install --dev
+          pipenv run sh -c "flask run &"
+      - name: Test with pytest
+        run: |
+          pip install pytest
+          pip install pytest-cov
+          pipenv run pytest --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+  build:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
