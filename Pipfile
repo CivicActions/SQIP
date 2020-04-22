@@ -5,10 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 autopep8 = "*"
+pytest = "*"
+pytest-cov = "*"
 
 [packages]
 pyqldb = "*"
 flask = "*"
+flask-restx = "*"
 
 [requires]
 python_version = "3.7"

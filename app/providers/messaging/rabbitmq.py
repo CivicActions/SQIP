@@ -1,12 +1,12 @@
-from flask.views import MethodView
+from app.providers.providers import ProviderInterface
 
 
-class RabbitMQProvider(MethodView):
+@ProviderInterface.register
+class RabbitMQProvider:
+    def connect(self, path: str, file_name: str):
+        """Connect to resource"""
+        raise NotImplementedError
 
-    def get(self):
-        return 'Messaging: v0.0.1'
-        pass
-
-    def post(self):
-        # create a provider instance
-        pass
+    def disconnect(self, full_file_path: str):
+        """Disconnect from resource"""
+        raise NotImplementedError
